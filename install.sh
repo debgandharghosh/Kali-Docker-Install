@@ -13,3 +13,10 @@ sudo apt-get update
 sudo apt install -y docker.io
 sudo systemctl enable docker --now
 sudo docker
+sudo docker run hello-world
+
+
+# configure Docker user group permissions
+sudo groupadd docker
+sudo gpasswd -a ${USER} docker
+sudo service docker restart
